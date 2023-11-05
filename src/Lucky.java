@@ -8,7 +8,7 @@ public class Lucky {
         @Override
         public void run() {
             while (true) {
-                int x = Lucky.x.incrementAndGet();
+                int x = Lucky.x.getAndIncrement();
                 if (x < 999999) {
                     if ((x % 10) + (x / 10) % 10 + (x / 100) % 10 == (x / 1000)
                             % 10 + (x / 10000) % 10 + (x / 100000) % 10) {
